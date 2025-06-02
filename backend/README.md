@@ -1,4 +1,9 @@
 To install dependencies:
+
+```sh
+npm install -g bun
+```
+
 ```sh
 bun install
 ```
