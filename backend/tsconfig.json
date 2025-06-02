@@ -10,6 +10,15 @@
     ],
     "types": ["vite/client"],
     "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx"
+    "jsxImportSource": "hono/jsx",
+    "baseUrl": "./src",
+    "paths": {
+      "@connection/*": ["connection/*"],
+      "@routes/*": ["routes/*"],
+      "@lib/*": ["lib/*"],
+      "@services/*": ["services/*"],
+      "@contexts/*": ["contexts/*"],
+      "@assets/*": ["assets/*"]
+    }
   },
 }
