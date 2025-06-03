@@ -2,15 +2,15 @@ import { Hono } from 'hono'
 import { renderer } from './renderer'
 import api from '@routes/api/health'
 import ssrPage from '@routes/view/page'
-import { authRoutes } from '@services/auth'
+import { ZodError } from 'zod'
+import { HTTPException } from 'hono/http-exception'
+import { authController } from '@routes/api/auth'
 
-type Bindings = {
+export type ApplicationVariables = {
   DATABASE_URL: string
 }
 
-export type App = Hono<{ Bindings: Bindings }>
-
-const app = new Hono<{ Bindings: Bindings }>()
+const app = new Hono<{ Bindings: ApplicationVariables }>()
 
 // Global renderer untuk semua route SSR
 app.use('*', renderer);
@@ -19,7 +19,7 @@ app.use('*', renderer);
 app.route('/api', api);
 
 // API Auth route endpoint
-authRoutes(app);
+app.route('/api', authController);
 
 // Handler fallback untuk semua route /api/* yang gak ketemu
 app.all('/api/*', (c) => {
@@ -31,13 +31,23 @@ app.all('/api/*', (c) => {
 })
 
 // Error handler
-app.onError((err, c) => {
-  console.error('Unhandled Error:', err)
-  return c.json({ error: (err as Error).message }, 500)
-})
-
-app.notFound((c) => {
-  return c.json({ error: 'Not Found' }, 404)
+app.onError(async (err, c) => {
+    if (err instanceof HTTPException) {
+        c.status(err.status)
+        return c.json({
+            errors: err.message
+        })
+    } else if (err instanceof ZodError) {
+        c.status(400)
+        return c.json({
+            errors: err.message
+        })
+    } else {
+        c.status(500)
+        return c.json({
+            errors: err.message
+        })
+    }
 })
 
 // SSR page

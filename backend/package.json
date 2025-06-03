@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.0.0",
-    "hono": "^4.7.11"
+    "@types/bun": "^1.2.15",
+    "bcrypt-edge": "^0.1.1",
+    "hono": "^4.7.11",
+    "zod": "^3.25.49"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.2.3",
