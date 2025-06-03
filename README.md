@@ -19,7 +19,7 @@
 - [ ] Lihat histori order.
 - [ ] Beri rating & ulasan.
 
-### Admin Journey (Pengelola Laundry)
+### Admin Journey (Pengelola Laundery)
 - [ ] Manajemen Order
 - [ ] Lihat order masuk & status.
 - [ ] Update status (diproses, selesai, diantar).
