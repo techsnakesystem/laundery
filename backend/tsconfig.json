@@ -18,7 +18,8 @@
       "@lib/*": ["lib/*"],
       "@services/*": ["services/*"],
       "@contexts/*": ["contexts/*"],
-      "@assets/*": ["assets/*"]
+      "@assets/*": ["assets/*"],
+      "@middleware/*": ["middleware/*"],
     }
   },
 }

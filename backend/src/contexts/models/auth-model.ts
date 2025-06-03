@@ -34,7 +34,7 @@ export type RegisterUserRequest = {
 }
 
 export type LoginUserRequest = {
-    username: string;
+    email: string;
     password: string;
 }
 

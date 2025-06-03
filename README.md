@@ -1,7 +1,7 @@
 ## 🧠 Alur Bisnis Aplikasi Laundery
 
 ### User Journey (Pelanggan)
-- [ ] Registrasi/Login
+- [x] Registrasi/Login
 - [ ] Pelanggan buat akun / login.
 - [ ] Order Laundry
 - [ ] Pilih jenis layanan (cuci kering, setrika saja, ekspres, dll).
