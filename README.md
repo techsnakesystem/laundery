@@ -1,4 +1,4 @@
-## 🧠 Alur Bisnis Aplikasi Laundry
+## 🧠 Alur Bisnis Aplikasi Laundery
 
 ### User Journey (Pelanggan)
 - [ ] Registrasi/Login
