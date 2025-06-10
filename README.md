@@ -19,6 +19,8 @@
 - [ ] Review dan Riwayat
 - [ ] Lihat histori order.
 - [ ] Beri rating & ulasan.
+- [ ] Forget Password
+- [ ] Change Password
 
 ### Admin Journey (Pengelola Laundery)
 - [ ] Manajemen Order
