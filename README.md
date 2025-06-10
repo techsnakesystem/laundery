@@ -6,9 +6,9 @@
 ## 🔥 Progress Web Api
 
 ### 👤 User Journey (Pelanggan)
-- [x] Registrasi  
+- [ ] Registrasi  
 - [ ] Aktivasi pake OTP  
-- [ ] Login  
+- [x] Login  
 - [ ] Order Laundry  
 - [ ] Pilih jenis layanan (cuci kering, setrika saja, ekspres, dll)  
 - [ ] Masukkan detail pakaian (jumlah, jenis)  
